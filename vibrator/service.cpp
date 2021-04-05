@@ -45,7 +45,7 @@ status_t registerVibratorService() {
     device_parameter dev_param2 { 0, VIBE_KP_CFG_FREQUENCY_PARAM2, 0};
     device_parameter dev_param3 { 0, VIBE_KP_CFG_FREQUENCY_PARAM3, 0};
     device_parameter dev_param4 { 0, VIBE_KP_CFG_FREQUENCY_PARAM4, 400};
-    device_parameter dev_param5 { 0, VIBE_KP_CFG_FREQUENCY_PARAM5, 13435};
+    device_parameter dev_param5 { 0, VIBE_KP_CFG_FREQUENCY_PARAM5, 13000};
     device_parameter dev_param6 { 0, VIBE_KP_CFG_FREQUENCY_PARAM6, 0};
     device_parameter dev_param_update_rate {0, VIBE_KP_CFG_UPDATE_RATE_MS, 5};
 

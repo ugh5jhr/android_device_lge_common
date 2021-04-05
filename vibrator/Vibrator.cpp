@@ -43,7 +43,7 @@ namespace implementation {
 static constexpr double BUFFER_ENTRIES_PER_MS = 8.21;
 
 // Sine amplitude for buffer values
-static constexpr uint8_t DEFAULT_AMPLITUDE = 127;
+static constexpr uint8_t DEFAULT_AMPLITUDE = 80;
 
 // Output buffer size (immvibed uses 40 and not size of VIBE_OUTPUT_SAMPLE_SIZE)
 static constexpr int32_t OUTPUT_BUFFER_SIZE = 40;
@@ -55,7 +55,7 @@ static constexpr int32_t WAVEFORM_CLICK_EFFECT_MS = 6;
 static constexpr int32_t WAVEFORM_TICK_EFFECT_MS = 2;
 
 // Double click effect in ms
-static constexpr uint32_t WAVEFORM_DOUBLE_CLICK_EFFECT_MS = 135;
+static constexpr uint32_t WAVEFORM_DOUBLE_CLICK_EFFECT_MS = 40;
 
 // Heavy click effect in ms
 static constexpr uint32_t WAVEFORM_HEAVY_CLICK_EFFECT_MS = 8;
@@ -190,8 +190,10 @@ static uint8_t convertEffectStrength(EffectStrength strength) {
         amplitude = DEFAULT_AMPLITUDE / 2;
         break;
     case EffectStrength::MEDIUM:
-    case EffectStrength::STRONG:
         amplitude = DEFAULT_AMPLITUDE;
+        break;
+    case EffectStrength::STRONG:
+        amplitude = DEFAULT_AMPLITUDE * 1.5;
         break;
     }
 
