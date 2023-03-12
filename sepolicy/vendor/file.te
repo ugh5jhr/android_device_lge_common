@@ -1,2 +1,23 @@
 # Sysfs
 type sysfs_dac, sysfs_type, fs_type;
+# used for /dsp files
+type adsprpcd_file, file_type, mlstrustedobject;
+
+type bt_firmware_file, file_type;
+
+# Default type for anything under /firmware.
+type firmware_file, fs_type, contextmount_type;
+
+type qdisplay_service, vndservice_manager_type;
+
+#SurfaceFlinger file type for sysfs access
+type sysfs_graphics, sysfs_type, fs_type;
+
+type display_vendor_data_file, file_type, data_file_type;
+##
+type hal_perf_default, file_type;
+
+type sysfs_battery_supply, sysfs_type, fs_type;
+type sysfs_usb_supply, sysfs_type, fs_type;
+
+type hal_keymaster_qti_exec, exec_type, vendor_file_type, file_type;
